@@ -11,7 +11,7 @@ const SearchPage = ({ updateOption, option, updateBooks, getAllBooks, allBooks, 
     const shelvesValue = shelves.map(e => {
         return `${e.charAt(0).toLowerCase()}${e.slice(1).split('-').join('')}`
     })
-    console.log(shelvesValue)
+    
     // array of book in the home page each within it's shelf in array
     //the first value from every array set to the value of shelf to use it in the iteration
     let fullBooksArr = [
@@ -39,7 +39,6 @@ const SearchPage = ({ updateOption, option, updateBooks, getAllBooks, allBooks, 
                             }
                         }
                     setSearchBooks(finalData)
-                    console.log(finalData)
                     } else {
                         setSearchBooks([])
                     }
