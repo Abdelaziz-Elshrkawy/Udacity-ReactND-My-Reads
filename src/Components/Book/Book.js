@@ -1,5 +1,6 @@
 import Option from "./Option";
 import image from '../../icons/cover error.webp'
+import { PropTypes } from 'prop-types'
 const Book = ({ book, updateOption, updateBooks }) => {
     return (
         <div className="book">
@@ -18,5 +19,10 @@ const Book = ({ book, updateOption, updateBooks }) => {
             <div className="book-authors">{book.authors ? book.authors[0] : false}</div>
         </div>
     )
+}
+Book.propTypes = {
+    book: PropTypes.object,
+    updateOption: PropTypes.func,
+    updateBooks: PropTypes.func
 }
 export default Book;

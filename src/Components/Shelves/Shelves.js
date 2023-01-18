@@ -26,4 +26,11 @@ Shelves.prototype = {
     name: PropTypes.string.isRequired
 }
 
+Shelves.propTypes = {
+    name: PropTypes.string,
+    allBooks: PropTypes.object,
+    updateOption: PropTypes.func,
+    updateBooks: PropTypes.func
+}
+
 export default Shelves;
