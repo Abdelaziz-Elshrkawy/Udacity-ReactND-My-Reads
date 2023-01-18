@@ -22,5 +22,6 @@
         - user can add any book form search result to desired shelf
 
 ## Installation 
-    - Clone the Repository then run `npm install` after the installation finishes type `npm start` then the development server will automatically open the App in the browser 
+    - Clone the Repository then run `npm install` 
+    - after the installation finishes type `npm start` then the development server will automatically open the App in the browser 
     - to build the app run `npm run build`

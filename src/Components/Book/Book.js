@@ -1,5 +1,5 @@
 import Option from "./Option";
-
+import image from '../../icons/cover error.webp'
 const Book = ({ book, updateOption, updateBooks }) => {
     return (
         <div className="book">
@@ -9,7 +9,7 @@ const Book = ({ book, updateOption, updateBooks }) => {
                     style={{
                         width: 128,
                         height: 188,
-                        backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail : false})`
+                        backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail : image})`
                     }}
                 ></div>
                 <Option updateBooks={updateBooks} book={book} updateOption={updateOption} />

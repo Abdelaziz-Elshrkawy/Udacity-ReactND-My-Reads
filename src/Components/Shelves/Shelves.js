@@ -1,7 +1,7 @@
 import Book from './../Book/Book';
 import { PropTypes } from "prop-types";
 
-const Shelves = ({ name, allBooks, updateOption, updateBooks,  }) => {
+const Shelves = ({ name, allBooks, updateOption, updateBooks }) => {
     const shelfBooks = allBooks.filter(e => e.shelf === `${name.charAt(0).toLowerCase()}${name.slice(1).split(' ').join('')}`);
 
     return (

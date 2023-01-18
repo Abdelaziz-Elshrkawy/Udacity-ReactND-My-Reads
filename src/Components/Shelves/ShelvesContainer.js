@@ -1,11 +1,7 @@
 import Shelves from "./Shelves";
 import { Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
-const ShelvesContainer = ({ updateOption, allBooks, updateBooks }) => {
-
-    const shelves = ['currently-Reading', 'want-To-Read', 'read']
-    const pageShelves = shelves
-        .map(e => `${e.charAt(0).toUpperCase()}${(e.slice(1).split('-').join(' '))}`);
+const ShelvesContainer = ({ updateOption, allBooks, updateBooks, pageShelves }) => {
 
     return (
         <div className="shelves-container">
