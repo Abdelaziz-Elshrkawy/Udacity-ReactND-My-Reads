@@ -19,7 +19,9 @@
         - every book can be removed from it's own shelf.
     - Search Page
         - user can search for desired book by typing relative string to the book name in the search input.
-        - user can add any book form search result to desired shelf
+        - user can add any book form search result to desired shelf.
+    - Book Detailed Page
+      - showing the book authors and description.
 
 ## Installation 
     - Clone the Repository then run `npm install` 
