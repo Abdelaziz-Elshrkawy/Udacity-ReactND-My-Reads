@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import ShelvesContainer from './Components/Shelves/ShelvesContainer';
@@ -22,7 +22,7 @@ function App() {
     await update(book, value)
     getAllBooks()
   }
-
+/*   console.log(booksIdPerShelf) */
   return (
     <Routes>
       <Route exact path='/' element={<ShelvesContainer getAllBooks={getAllBooks} pageShelves={pageShelves} allBooks={allBooks} updateOption={updateOption} />} />

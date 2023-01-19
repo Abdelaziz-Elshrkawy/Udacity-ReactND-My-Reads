@@ -8,7 +8,7 @@ const ShelvesContainer = ({ updateOption, allBooks, updateBooks, pageShelves, ge
         () => {
             getAllBooks()
         }
-    )
+    ,[])
     return (
         <div className="shelves-container">
             <div className="list-books-title">
