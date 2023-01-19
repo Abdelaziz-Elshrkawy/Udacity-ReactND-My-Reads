@@ -11,7 +11,7 @@ const SearchPage = ({ updateOption, option, updateBooks, getAllBooks, allBooks, 
     const shelvesValue = shelves.map(e => {
         return `${e.charAt(0).toLowerCase()}${e.slice(1).split('-').join('')}`
     })
-    
+
     // array of book in the home page each within it's shelf in array
     //the first value from every array set to the value of shelf to use it in the iteration
     let fullBooksArr = [
@@ -19,30 +19,32 @@ const SearchPage = ({ updateOption, option, updateBooks, getAllBooks, allBooks, 
         [shelvesValue[1], ...(allBooks.filter(e => e.shelf === shelvesValue[1]))],
         [shelvesValue[2], ...(allBooks.filter(e => e.shelf === shelvesValue[2]))]
     ]
-    
+
     const [searchBooks, setSearchBooks] = useState([])
     useEffect(() => {
         getAllBooks()
         if (searchValue.length > 0) {
             API.search(searchValue).then((data) => {
                 if (!data.error) {
-                        //assigning the retrieved search data to variable to modify it
-                        let finalData = data
-
-                        for (let i = 0; i < fullBooksArr.length; i++){
-                            for (let j = 1; j < fullBooksArr[i].length; j++){
-                                for (let y = 0; y < data.length; y++){
-                                    if (fullBooksArr[i][j].id === finalData[y].id) {
-                                        finalData[y].shelf = fullBooksArr[i][0]
-                                    }
+                    //assigning the retrieved search data to variable to modify it
+                    let finalData = data
+                    for (let book of finalData) {
+                        book.shelf = 'none'
+                    }
+                    for (let i = 0; i < fullBooksArr.length; i++) {
+                        for (let j = 1; j < fullBooksArr[i].length; j++) {
+                            for (let y = 0; y < data.length; y++) {
+                                if (fullBooksArr[i][j].id === finalData[y].id) {
+                                    finalData[y].shelf = fullBooksArr[i][0]
                                 }
                             }
                         }
-                    setSearchBooks(finalData)
-                    } else {
-                        setSearchBooks([])
                     }
-                })
+                    setSearchBooks(finalData)
+                } else {
+                    setSearchBooks([])
+                }
+            })
         }
     }, [searchValue]
     );

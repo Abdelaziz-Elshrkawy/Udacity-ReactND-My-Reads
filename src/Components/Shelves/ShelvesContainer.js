@@ -1,8 +1,14 @@
 import Shelves from "./Shelves";
 import { Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
-const ShelvesContainer = ({ updateOption, allBooks, updateBooks, pageShelves }) => {
-
+import { useEffect } from "react";
+const ShelvesContainer = ({ updateOption, allBooks, updateBooks, pageShelves, getAllBooks }) => {
+    window.history.pushState(null, null, '/');
+    useEffect(
+        () => {
+            getAllBooks()
+        }
+    )
     return (
         <div className="shelves-container">
             <div className="list-books-title">
@@ -22,6 +28,6 @@ const ShelvesContainer = ({ updateOption, allBooks, updateBooks, pageShelves }) 
 }
 ShelvesContainer.prototype = {
     updateOption: PropTypes.func,
-    allBooks: PropTypes.Object
+    allBooks: PropTypes.array
 }
 export default ShelvesContainer;

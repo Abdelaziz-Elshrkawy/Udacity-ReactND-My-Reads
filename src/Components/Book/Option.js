@@ -7,7 +7,7 @@ const Option = ({ book, updateOption }) => {
                 updateOption(event.target.value, book)
                 }}
             >
-                <option value="none" disabled>
+                <option disabled>
                     Move to...
                 </option>
                 <option className="hide" value="currentlyReading">

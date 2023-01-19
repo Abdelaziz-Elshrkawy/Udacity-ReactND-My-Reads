@@ -28,7 +28,7 @@ Shelves.prototype = {
 
 Shelves.propTypes = {
     name: PropTypes.string,
-    allBooks: PropTypes.object,
+    allBooks: PropTypes.array,
     updateOption: PropTypes.func,
     updateBooks: PropTypes.func
 }
