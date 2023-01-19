@@ -17,9 +17,11 @@
         - books can be stored in various shelves.
         - every book can move from shelf to another.
         - every book can be removed from it's own shelf.
+        - user can click on the book cover to redirect to detailed book page.
     - Search Page
         - user can search for desired book by typing relative string to the book name in the search input.
         - user can add any book form search result to desired shelf.
+        - user can click on the book cover to redirect to detailed book page.
     - Book Detailed Page
       - showing the book authors and description.
 
