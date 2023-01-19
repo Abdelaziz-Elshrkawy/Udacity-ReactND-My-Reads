@@ -27,7 +27,7 @@ const BookDetails = () => {
                     ></div>
             </div>
                 <div className="book-title-detailed">{book.title}</div>
-                <div className="book-authors-detailed"><div className="author-div">Authors</div>{book.authors ? [...book.authors].join(', ') : 'No Authors'}</div>
+                <div className="book-authors-detailed"><div className="authors-div">Authors</div>{book.authors ? [...book.authors].join(', ') : 'No Authors'}</div>
                 <div className="book-description-detailed"><div className="description-div">Description</div>{book.description ? book.description.slice(0,500)+'....' : false}</div>
             </div>
         </div>
