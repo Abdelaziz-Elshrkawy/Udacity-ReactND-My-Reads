@@ -3,7 +3,7 @@ import Book from './Book/Book';
 import { useEffect, useState } from 'react';
 import * as API from '../BooksAPI'
 
-const SearchPage = ({ updateOption, option, updateBooks, getAllBooks, allBooks, shelves }) => {
+const SearchPage = ({ updateOption, updateBooks, getAllBooks, allBooks, shelves }) => {
     const [searchValue, setSearchValue] = useState('');
     const updateSearchValue = (e) => {
         setSearchValue(e.target.value)
@@ -70,7 +70,7 @@ const SearchPage = ({ updateOption, option, updateBooks, getAllBooks, allBooks, 
                         searchBooks.length > 0 ?
                             searchBooks.map((book) => {
                                 return (
-                                    <Book getAllBooks={getAllBooks} updateBooks={updateBooks} option={option} updateOption={updateOption} key={book.id} book={book} />
+                                    <Book updateBooks={updateBooks} updateOption={updateOption} key={book.id} book={book} />
                                 )
                             }) : <p>No Book Matched Your Search Input</p> : <p>Search For Books</p>
                     }
