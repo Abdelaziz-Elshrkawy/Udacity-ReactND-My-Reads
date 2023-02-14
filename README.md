@@ -20,7 +20,6 @@
 ---
 ## Project Details
     -Home Page
-        - books can be stored in various shelves.
         - every book can move from shelf to another.
         - every book can be removed from it's own shelf.
         - user can click on the book cover to redirect to detailed book page.
