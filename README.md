@@ -3,7 +3,7 @@
 ## This Project is for [React](https://reactjs.org/) NanoDegree Provided by [Udacity](https://www.udacity.com/) Sponsored by [EGFWD](https://egfwd.com/)
 ---
 
-## [Live Demo](https://myreads.abdelaziz-elshr.repl.co/)
+## [Live Demo](https://37f151e1-ed72-4c13-bbaa-77bf61e2bddb-00-1kof2oesg22aq.kirk.replit.dev/)
 
 ---
 
